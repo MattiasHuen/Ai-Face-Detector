@@ -2,6 +2,9 @@ import kagglehub
 import os
 
 def import_data(out_path: str) -> None:
+    """This function uses the kagglehub API to fetch the 
+    human-faces-data-set and import it to the designated out_path."""
+    
     os.environ["KAGGLEHUB_CACHE"] = f"{out_path}"
     
     path = kagglehub.dataset_download("hassnainzaidi/human-faces-data-set")

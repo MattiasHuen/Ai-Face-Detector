@@ -4,12 +4,15 @@ import typer
 from torch.utils.data import Dataset
 
 
+
 class MyDataset(Dataset):
     """My custom dataset."""
 
     def __init__(self, data_path: Path) -> None:
         self.data_path = data_path
-
+        self.real_face_path = self.data_path + "/AI-Generated Images"
+        self.fake_face_path = self.data_path + "/Real Images"
+        
     def __len__(self) -> int:
         """Return the length of the dataset."""
 
@@ -18,6 +21,11 @@ class MyDataset(Dataset):
 
     def preprocess(self, output_folder: Path) -> None:
         """Preprocess the raw data and save it to the output folder."""
+        
+        
+
+
+
 
 def preprocess(data_path: Path, output_folder: Path) -> None:
     print("Preprocessing data...")
